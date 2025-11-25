@@ -1,0 +1,19 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<h2>Добро пожаловать в LocalLibrary!</h2>
+
+<p>Количество книг: {{ num_books }}</p>
+<p>Количество экземпляров: {{ num_instances }}</p>
+<p>Доступные экземпляры: {{ num_instances_available }}</p>
+<p>Количество авторов: {{ num_authors }}</p>
+
+<hr>
+
+<p style="color: #666; font-size: 0.9rem; margin-top: 15px;">
+    Вы посетили эту страницу {{ num_visits }}
+    {% if num_visits == 1 %}раз{% else %}раз(а){% endif %}.
+</p>
+{% endblock %}
